@@ -1,0 +1,14 @@
+syntax = "proto3";
+package monitor.proto;
+
+message CpuStat {
+    string cpu_name = 1;        // CPU名称（如"cpu0", "cpu1"）
+    float cpu_percent = 2;      // 总体CPU使用率（%）
+    float usr_percent = 3;      // 用户态使用率（%）
+    float system_percent = 4;   // 系统态使用率（%）
+    float nice_percent = 5;     // 低优先级用户态使用率（%）
+    float idle_percent = 6;     // 空闲时间占比（%）
+    float io_wait_percent = 7;  // I/O等待时间占比（%）
+    float irq_percent = 8;      // 硬件中断时间占比（%）
+    float soft_irq_percent = 9; // 软中断时间占比（%）
+}

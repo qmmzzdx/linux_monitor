@@ -1,0 +1,8 @@
+syntax = "proto3";              // 使用proto3语法
+package monitor.proto;          // 包名：monitor.proto
+
+message CpuLoad {
+    float load_avg_1 = 1;       // 1分钟平均负载
+    float load_avg_3 = 2;       // 3分钟平均负载
+    float load_avg_15 = 3;      // 15分钟平均负载
+}

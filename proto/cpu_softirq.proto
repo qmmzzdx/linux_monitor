@@ -1,0 +1,16 @@
+syntax = "proto3";
+package monitor.proto;
+
+message SoftIrq {
+    string cpu = 1;            // CPU核心标识（如"cpu0"）
+    float hi = 2;              // 高优先级任务中断计数
+    float timer = 3;           // 定时器中断计数
+    float net_tx = 4;          // 网络发送中断计数
+    float net_rx = 5;          // 网络接收中断计数
+    float block = 6;           // 块设备中断计数
+    float irq_poll = 7;        // IRQ轮询中断计数
+    float tasklet = 8;         // 小任务中断计数
+    float sched = 9;           // 调度器中断计数
+    float hrtimer = 10;        // 高精度定时器中断计数
+    float rcu = 11;            // RCU（读-拷贝-更新）中断计数
+}
